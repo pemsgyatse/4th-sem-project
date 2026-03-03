@@ -1,0 +1,351 @@
+html, body{
+  height: 100%;
+  margin: 0;
+}
+
+body{
+  padding-top: 50px;
+}
+
+nav{
+  display: flex;
+  justify-content:space-between;
+  /* background-color: aquamarine; */
+  border-radius: 4px;
+}
+
+:hover nav li{
+  cursor: pointer;
+}
+
+ul{
+  display: flex;
+  list-style: none;
+  justify-content: end;
+  gap: 50px;
+}
+
+a{
+  text-decoration: none;
+}
+
+
+.well-come-div{
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+  padding: 10px;
+}
+
+img{
+  height: 400px;
+  object-fit: cover;
+
+}
+
+.container{ 
+  display: flex;
+  margin-top: 10px;
+  padding: 10px;
+  justify-content: space-around;
+  gap: 10px;
+  font-weight: bold;
+  background-color: beige;
+}
+
+.container div{
+  flex: 1;
+  text-align: center;
+}
+
+:hover .container div{
+  cursor: pointer;
+}
+
+.home{
+  display: none;
+}
+
+.about{
+  display: none;
+}
+
+.contact{
+  display: none;
+}
+
+.help{
+  display: none;
+}
+
+.student-dashbord{
+  display: none;
+}
+
+.admin{
+  display: none;
+  height: 100%;
+}
+.admin1{
+  height: 100%;
+  display: flex;
+  gap: 20px;
+}
+
+.dashbord{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: aquamarine;
+  width: 220px;
+  margin-top: 20px;
+  gap: 4px;
+  position: fixed;
+}
+
+.dashbord div{
+  height: 75px;
+  background-color: beige;
+  padding: 4px;
+}
+
+:hover .dashbord div{
+  cursor: pointer;
+}
+
+
+.dashbord-div{
+  display: flex;
+  margin-top: 20px;
+  flex-direction: row;
+  gap: 20px;
+  background-color: aquamarine;
+  flex-wrap: wrap; /*allow items to go to the next row */
+  justify-content: center;
+   width: 100%;
+   height: 100%;
+  align-items: center;
+}
+
+.dashbord-div div{
+  background-color:beige ;
+  flex: 1 1 calc(33.33% - 40px);  /* 3 items per row with gap considered (-20px) did because the gap was 20px */
+  padding: 25px;
+  margin: 15px;
+}
+
+.student-dashbord{
+  margin-top: 20px;
+  display: none;
+}
+.result_dashboard{
+   margin-top: 20px;
+  display: none;
+
+}
+
+.active{
+  display: block;
+}
+
+.notice_bord{
+  margin-top: 20px;
+  display: none;
+}
+
+.teacher_dashboard{
+  margin-top: 20px;
+  display: none;
+}
+
+.add_student{
+  margin-top: 20px;
+  display: none;
+}
+
+.notive_div{
+  height: 270px; 
+  width: 500px; 
+  background-color: rgba(215, 215, 216, 0.8); 
+  position: absolute;
+  margin-left: 650px;
+  margin-top: 50px;
+  border-bottom-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  z-index: -1;
+}
+
+textarea{
+  height: 400px;
+  width: 500px;
+}
+
+form{
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+ 
+}
+
+form div{
+  flex: 0 0 calc(50% - 20px);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* .parent-div{
+    flex: 0 0 calc(50% - 20px);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  } */
+
+  .myform p{
+    color: red;
+  }
+
+#actionIcons{
+  font-size: 20px;
+}
+
+ #actionIcons:hover{
+  color: red;
+}
+
+.studentprofile{
+  display: none;
+  margin-top: 35px;
+  width: 100%;
+  
+}
+.teacherprofile{
+  display: none;
+  margin-top: 35px;
+  width: 100%;
+  margin-left: 280px;
+}
+#teacher_profile{
+  font-size: 20px;
+  cursor: pointer;
+}
+i{
+  cursor: pointer;
+}
+#teacher_profile:hover{
+  color: red
+}
+
+#std_profile:hover{
+  color: red;
+}
+#std_profile{
+  font-size: 20px;
+  cursor: pointer;
+}
+
+#updatestudent{
+  display: none;
+  flex-direction: column;
+  margin-top: 35px;
+  width: 100%;
+  margin-left: 230px;
+}
+
+#std_update:hover{
+  color: red;
+}
+#std_update{
+  font-size: 20px;
+}
+
+.centeral_div{
+  margin-left: 230px;
+}
+
+.studentinformation{
+    margin-left: 230px;
+}
+
+.adminform{
+  background-color: rgba(215, 215, 216, 0.7);
+  border-radius: 12px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.adminRegisterDiv{
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+.adminform input{
+  width: 300px;
+  height: 30px;
+  padding: 20px;
+}
+
+.adminform span{
+  color: red;
+}
+
+.adminLoginform span{
+  color: red;
+}
+
+.adminLoginform input{
+  width: 300px;
+  height: 30px;
+  padding: 20px;
+}
+
+.adminLoginform{
+  background-color: rgba(215, 215, 216, 0.7);
+  border-radius: 12px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.adminLoginDiv{
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+.hoverform:hover{
+  cursor: pointer;
+}
+
+.studentinformation div{
+  display: flex;
+  /* justify-content: space-between; */
+  margin-left: 20px;
+  margin-right: 20px;
+  width: 100%;
+}
+
+.addstudentresult{
+  display: none;
+  margin-left: 280px;
+  margin-top: 30px;
+}
+
+.viewresult{
+  display: none;
+  margin-left: 280px;
+  margin-top: 30px;
+}

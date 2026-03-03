@@ -1,0 +1,23 @@
+.adminform{
+  background-color: #3891BA;
+   border-radius: 12px;
+  padding: 30px;
+}
+
+.adminRegister{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.adminform input{
+  width: 300px;
+  height: 30px;
+  padding: 7px;
+}
+
+td{
+  /* width: 300px; */
+  /* padding: 10px; */
+}

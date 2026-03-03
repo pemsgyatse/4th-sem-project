@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=\, initial-scale=1.0" />
+    <title>Tharlam academy</title>
+    <link rel="stylesheet" href="index.css" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+
+    <link
+      rel="icon"
+      href="/favicon/Cream and Blue Grunge Paper Travel India Youtube Thumbnail.png"
+    />
+  </head>
+  <body>
+    <nav class="navbar fixed-top p-2">
+      <ul>
+        <li>
+          <img
+            style="height: 50px; width: 50px"
+            src="/logo/logo_yellow.png"
+            alt="logo"
+          />
+        </li>
+      </ul>
+
+      <ul>
+          <a
+            style="text-decoration: none; color: black"
+            href="/home"
+            onclick="navigate(event,'/home')"
+            >Home</a
+          >
+        </li>
+        <li>
+          <a
+            style="text-decoration: none; color: black"
+            href="/about"
+            onclick="navigate(event, '/about')"
+            >About</a
+          >
+        </li>
+        <li>
+          <a
+            style="text-decoration: none; color: black"
+            href="/help"
+            onclick="navigate(event, '/help')"
+            >Help</a
+          >
+        </li>
+        <li>
+          <a
+            style="text-decoration: none; color: black"
+            href="/contact"
+            onclick="navigate(event, '/contact')"
+            >Contact</a
+          >
+        </li>
+      </ul>
+    </nav>
+    <!-- home page -->
+
+    <div class="home page">
+      <div class="well-come-div">
+        <h1>WEL-COME TO THARLAM MONASTIC SCHOOL</h1>
+      </div>
+
+      <div id="mycarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              class="d-block w-100"
+              src="/photos/IMG-20251211-WA0002.jpg"
+              alt="image 1"
+            />
+          </div>
+
+          <div class="carousel-item">
+            <img
+              class="d-block w-100"
+              src="/photos/IMG-20251211-WA0003.jpg"
+              alt="image 2"
+            />
+          </div>
+
+          <div class="carousel-item">
+            <img
+              class="d-block w-100"
+              src="/photos/IMG-20251211-WA0004.jpg"
+              alt="image 2"
+            />
+          </div>
+
+          <div class="carousel-item">
+            <img
+              class="d-block w-100"
+              src="/photos/IMG-20251211-WA0005.jpg"
+              alt="image 2"
+            />
+          </div>
+
+          <div class="carousel-item">
+            <img
+              class="d-block w-100"
+              src="/photos/IMG-20251211-WA0007.jpg"
+              alt="image 2"
+            />
+          </div>
+
+          <div class="carousel-item">
+            <img
+              class="d-block w-100"
+              src="/photos/IMG-20251211-WA0008.jpg"
+              alt="image 2"
+            />
+          </div>
+
+          <div class="carousel-item">
+            <img
+              class="d-block w-100"
+              src="/photos/IMG-20251211-WA0009.jpg"
+              alt="image 2"
+            />
+          </div>
+
+          <div class="carousel-item">
+            <img
+              class="d-block w-100"
+              src="/photos/IMG-20251211-WA0010.jpg"
+              alt="image 2"
+            />
+          </div>
+
+          <div class="notive_div">
+            <p
+              class="anotice"
+              style="margin: 8px; font-weight: bold; font-size: large"
+            >
+              there is not any notice for now
+            </p>
+          </div>
+        </div>
+
+        <button
+          type="button"
+          type="button"
+          class="carousel-control-prev"
+          data-bs-target="#mycarousel"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+
+        <button
+          type="button"
+          class="carousel-control-next"
+          data-bs-target="#mycarousel"
+          data-bs-slide="next"
+          aria-hidden="true"
+        >
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+
+          <!-- admin registration form -->
+      <div class="adminRegisterDiv">
+      <form class="adminform" action="">
+        <table>
+          <tr>
+            <td><label for="">Name:</label></td>
+            <td>
+              <input id="username" type="text" class="form-control" placeholder="User name" />
+              <span class="usernameErr"></span>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="">Email:</label></td>
+            <td>
+              <input id="useremail" type="text" class="form-control" placeholder="User Email" />
+              <span class="useremailErr"></span>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="">Password:</label></td>
+            <td>
+              <input id="userpassowrd" type="password" class="form-control" placeholder="Enter Password" />
+              <span class="passwordErr"></span>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="">C-Password:</label></td>
+            <td>
+              <input id="usercpassword" type="password" class="form-control" placeholder="Confirm Password" />
+              <span class="usercpasswordErr"></span>
+            </td>
+          </tr>
+        </table>
+        <center><button onclick="registerthisform(event)" class="btn btn-primary">Submit</button></center>
+        <center>
+          <p>do you already have an account? <span class="hoverform" style="color: blue; text-decoration: dashed;" onclick="loginfromofadmine()">log in</span></p>
+        </center>
+      </form>
+    </div>
+
+    <!-- addmin login form  -->
+     <div class="adminLoginDiv">
+      <form class="adminLoginform" action="">
+        <table>
+          <tr>
+            <td><label for="">Email:</label></td>
+            <td>
+              <input id="loginuseremail" type="text" class="form-control" placeholder="User Email" />
+              <span class="loginuseremailErr"></span>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="">Password:</label></td>
+            <td>
+              <input id="loginuserpassowrd" type="password" class="form-control" placeholder="Enter Password" />
+              <span class="loginpasswordErr"></span>
+            </td>
+          </tr>
+        </table>
+        <center><button onclick="loginadmin(event)" class="btn btn-primary">Submit</button></center>
+
+        <p>don't have account ? <span class="hoverform" style="color: blue; text-decoration: dashed;" onclick="adminregisterform()">register now</span></p>
+        <center><span class="loginformErr"></span></center>
+      </form>
+    </div>
+
+
+    <!-- main container -->
+
+      <div class="container">
+        <div>
+          <!-- <a
+            style="display: block; text-decoration: none; color: black"
+            href="/admin"
+            onclick="navigate(event, '/admin')"
+            >ADMIN</a> -->
+          <p onclick="adminregisterform()">ADMIN</p>
+          <i class="fa-solid fa-user-tie"></i>
+        </div>
+
+        <div>
+          <p onclick="adminregisterform()">STUDENT</p>
+          <i class="fa-solid fa-graduation-cap"></i>
+        </div>
+
+        <div>
+          <p onclick="adminregisterform()">TEACHER</p>
+          <i class="fa-solid fa-person-chalkboard"></i>
+        </div>
+        <div>
+          <p onclick=" notice(event)">NOTICE</p>
+          <i class="fa-regular fa-flag"></i>
+        </div>
+      </div>
+    </div>
+
+    <div class="about page">
+       <div style="max-width: 800px; margin: 50px auto; padding: 30px; background-color: #fff; border-radius: 12px; box-shadow: 0 5px 12px rgba(0,0,0,0.15);">
+
+    <h1 style="text-align: center; color: #4CAF50; margin-bottom: 20px;">
+      About Tharlam Manjushree
+    </h1>
+
+    <p style="line-height: 1.6; font-size: 16px;">
+      Welcome to <span style="color: #4CAF50; font-weight: bold;">Tharlam Manjushree</span>, where education meets innovation. Our <span style="font-weight: bold;">Student Management System</span> helps teachers and administrators manage student information efficiently and focus more on learning than paperwork.
+    </p>
+
+    <h2 style="color: #4CAF50; margin-top: 25px;">Our Mission</h2>
+    <p style="line-height: 1.6; font-size: 16px;">
+      At Tharlam Manjushree, our mission is to provide a holistic education while using modern technology to simplify administrative tasks. We aim to create an organized and transparent system for students, teachers, and staff.
+    </p>
+
+    <h2 style="color: #4CAF50; margin-top: 25px;">Features of Our System</h2>
+    <ul style="margin-top: 10px; line-height: 1.6;">
+      <li style="margin-bottom: 5px;">Store and update student personal and academic details</li>
+      <li style="margin-bottom: 5px;">Manage teacher information including subjects taught</li>
+      <li style="margin-bottom: 5px;">Search, filter, and track student progress easily</li>
+      <li style="margin-bottom: 5px;">Generate reports and maintain organized records</li>
+    </ul>
+
+    <h2 style="color: #4CAF50; margin-top: 25px;">Why Choose Tharlam Manjushree</h2>
+    <p style="line-height: 1.6; font-size: 16px;">
+      Our system ensures that all student and teacher data is organized and easily accessible. It helps reduce errors, save time, and allows teachers to focus on teaching while keeping parents informed about their child’s progress.
+    </p>
+
+    <p style="margin-top: 30px; text-align: center;">
+      <a href="index.html" style="text-decoration: none; background-color: #4CAF50; color: white; padding: 10px 20px; border-radius: 6px;">Back to Home</a>
+    </p>
+
+  </div>
+    </div>
+
+    <div class="help page">
+        <div style="max-width: 800px; margin: 50px auto; padding: 30px; background-color: #fff; border-radius: 12px; box-shadow: 0 5px 12px rgba(0,0,0,0.15);">
+
+    <h1 style="text-align: center; color: #4CAF50; margin-bottom: 20px;">
+      Help - Tharlam Manjushree
+    </h1>
+
+    <p style="line-height: 1.6; font-size: 16px;">
+      Welcome to the <span style="color: #4CAF50; font-weight: bold;">Help Page</span> for the Tharlam Manjushree Student Management System. Here you can find guidance on how to use the system efficiently and troubleshoot common issues.
+    </p>
+
+    <h2 style="color: #4CAF50; margin-top: 25px;">Getting Started</h2>
+    <ul style="margin-top: 10px; line-height: 1.6;">
+      <li style="margin-bottom: 5px;">Log in with your provided credentials.</li>
+      <li style="margin-bottom: 5px;">Navigate to the Students or Teachers section using the menu.</li>
+      <li style="margin-bottom: 5px;">Use the Add button to create new entries for students or teachers.</li>
+      <li style="margin-bottom: 5px;">Search and filter data using the search bar at the top of the page.</li>
+    </ul>
+
+    <h2 style="color: #4CAF50; margin-top: 25px;">Managing Data</h2>
+    <ul style="margin-top: 10px; line-height: 1.6;">
+      <li style="margin-bottom: 5px;">Click on a student or teacher entry to view detailed information.</li>
+      <li style="margin-bottom: 5px;">Use the Edit/Update button to modify information.</li>
+      <li style="margin-bottom: 5px;">Use the Delete button to remove an entry from the system.</li>
+    </ul>
+
+    <h2 style="color: #4CAF50; margin-top: 25px;">Troubleshooting</h2>
+    <ul style="margin-top: 10px; line-height: 1.6;">
+      <li style="margin-bottom: 5px;">If you cannot log in, check your username and password.</li>
+      <li style="margin-bottom: 5px;">Make sure your internet connection is stable when adding or updating data.</li>
+      <li style="margin-bottom: 5px;">If data is not showing, refresh the page or check if the server is running.</li>
+      <li style="margin-bottom: 5px;">Contact the system administrator if the problem persists.</li>
+    </ul>
+
+    <p style="margin-top: 30px; text-align: center;">
+      <a href="index.html" style="text-decoration: none; background-color: #4CAF50; color: white; padding: 10px 20px; border-radius: 6px;">Back to Home</a>
+    </p>
+
+  </div>
+    </div>
+
+    <div class="contact page">
+
+  <div style="max-width: 800px; margin: 50px auto; padding: 30px; background-color: #fff; border-radius: 12px; box-shadow: 0 5px 12px rgba(0,0,0,0.15);">
+
+    <h1 style="text-align: center; color: #4CAF50; margin-bottom: 20px;">
+      Contact Tharlam Manjushree
+    </h1>
+
+    <p style="line-height: 1.6; font-size: 16px;">
+      You can reach out to <span style="color: #4CAF50; font-weight: bold;">Tharlam Manjushree</span> for any inquiries, support, or feedback. Our office is located at <span style="font-weight: bold;">Boudha Phulbari, Kathmandu, Nepal</span>.
+    </p>
+
+    <h2 style="color: #4CAF50; margin-top: 25px;">Contact Information</h2>
+    <ul style="margin-top: 10px; line-height: 1.6;">
+      <li style="margin-bottom: 5px;">Phone: +977-9812345678</li>
+      <li style="margin-bottom: 5px;">Email: info@tharlammanjushree.edu.np</li>
+      <li style="margin-bottom: 5px;">Fax: +977-01-1234567</li>
+      <li style="margin-bottom: 5px;">Office Hours: Mon - Fri, 9:00 AM - 5:00 PM</li>
+    </ul>
+
+    <h2 style="color: #4CAF50; margin-top: 25px;">Location</h2>
+    <p style="line-height: 1.6; font-size: 16px;">
+      Boudha Phulbari, Kathmandu, Nepal.  
+      (You can use Google Maps or GPS to find the exact location.)
+    </p>
+
+    <p style="margin-top: 30px; text-align: center;">
+      <a href="index.html" style="text-decoration: none; background-color: #4CAF50; color: white; padding: 10px 20px; border-radius: 6px;">Back to Home</a>
+    </p>
+
+  </div>
+    </div>
+
+    <!-- admin page -->
+
+    <div class="admin">
+      <div class="admin1">
+        <div class="dashbord">
+          <div>
+            <i class="fa-solid fa-gauge-simple-high"></i>
+            <p onclick="dashbortevents(event, 'dashbord')">Dashboard</p>
+          </div>
+          <div>
+            <i class="fa-solid fa-graduation-cap"></i>
+            <p onclick="dashbortevents(event, 'student')">Student</p>
+          </div>
+          <!-- <div>
+            <i class="fa-solid fa-people-line"></i>
+            <p onclick="dashbortevents(event, 'student')">Parent</p>
+          </div> -->
+          <div>
+            <i class="fa-solid fa-person-chalkboard"></i>
+            <p onclick="dashbortevents(event, 'teacher')">Teacher</p>
+          </div>
+          <div>
+            <i class="fa-solid fa-square-poll-vertical"></i>
+            <p onclick="dashbortevents(event, 'result')">Result</p>
+          </div>
+          <div>
+            <i class="fa-solid fa-chalkboard-user"></i>
+            <p onclick="dashbortevents(event, 'notice')">Notice</p>
+          </div>
+          <div>
+            <i class="fa-solid fa-user-plus"></i>
+            <p onclick="dashbortevents(event, 'add_student')">Add Student</p>
+          </div>
+        </div>
+
+        <div class="centeral_div">
+          <div class="dashbord-div db_page">
+            <div>
+              <strong class="std"></strong>
+              <p>Total Student</p>
+            </div>
+
+            <div>
+              <strong class="tnum">8</strong>
+              <p>Total Teacher</p>
+            </div>
+
+            <div>
+              <strong class="prt"></strong>
+              <p>Total Parent</p>
+            </div>
+
+            <div>
+              <strong>8</strong>
+              <p>Notice</p>
+            </div>
+            <div>
+              <strong>8</strong>
+              <p>Attendance Student</p>
+            </div>
+            <div>
+              <strong>8</strong>
+              <p>Librarian</p>
+            </div>
+          </div>
+
+          <!-- student div -->
+          <div class="student-dashbord db_page" style="flex-direction: column">
+            <div style="display: flex; flex-direction: column">
+              <!--search icons from bootstrap -->
+              <input
+                class="form-control mr-sm-2"
+                type="search"
+                placeholder="Search student by name"
+                aria-label="Search"
+                id="searchbox"
+              />
+              <button
+                class="btn btn-outline-success my-2 my-sm-0"
+                type="submit"
+                onclick="searchStudent()"
+              >
+                Search
+              </button>
+            </div>
+            <table class="table table-bordered table-hover table-striped">
+              <thead class="">
+                <tr>
+                  <th>St_Name</th>
+                  <th>St_Class</th>
+                  <th>St_Email</th>
+                  <th>St_Phone</th>
+                  <th>St_Address</th>
+                  <th>G_Name</th>
+                  <th>G_Phone</th>
+                  <th>View Profile</th>
+                  <th>Action</th>
+                  <th>Update</th>
+                  <th>Add Result</th>
+                </tr>
+              </thead>
+
+              <tbody class="studentsinfosdata">
+
+              </tbody>
+            </table>
+          </div>
+
+          <div class="teacher_dashboard">
+             <table class="table table-hover table-striped">
+              <thead class="">
+                <tr>
+                  <th>T_Name</th>
+                  <th>Subject</th>
+                  <th>Phone</th>
+                  <th>Email</th>
+                  <th>Salary</th>
+                  <th>Department</th>
+                  <th>View Profile</th>
+                  <th>Action</th>
+                  <th>Update</th>
+                </tr>
+              </thead>
+
+              <tbody class="teachersrow">
+
+              </tbody>
+            </table>
+          </div>
+
+          <!-- student result section -->
+           <div class="result_dashboard">
+            <table class="table table-hover table-striped">
+              <thead>
+                <tr>
+                  <td>Student Name</td>
+                  <td>Nepali</td>
+                  <td>English</td>
+                  <td>Math</td>
+                  <td>Science</td>
+                  <td>Health</td>
+                  <td>Social</td>
+                  <td>OptMath</td>
+                  <td>Total</td>
+                </tr>
+              </thead>
+              <tbody class="stdmarks">
+
+              </tbody>
+            </table>
+
+           </div>
+
+          <!-- notice section -->
+
+          <div class="notice_bord db_page">
+            <textarea
+              name=""
+              id=""
+              placeholder="hey what's up, what is today notice"
+            ></textarea>
+            <button onclick="postnotice()" class="btn btn-primary">Post</button>
+          </div>
+
+          <!-- add student form -->
+
+          <div class="add_student db_page">
+            <form action="" class="myform">
+              <div>
+                <div>
+                  <span>First Name:</span>
+                  <input 
+                    type="text"
+                    placeholder="Student first_name"
+                    class="fname form-control"
+                  />
+                  <p class="fnameErr"></p>
+                </div>
+
+                <div>
+                  <span>Last Name:</span>
+                  <input
+                    type="text"
+                    placeholder="Student last_name"
+                    class="lname form-control"
+                  />
+                  <p class="lnameErr"></p>
+                </div>
+              </div>
+
+              <div>
+                <div>
+                  <span>Email:</span>
+                  <input type="email" placeholder="Email" class="email form-control" />
+                  <p class="emailErr"></p>
+                </div>
+
+                <div>
+                  <span>Address:</span>
+                  <input
+                    type="text"
+                    placeholder="Student's Address"
+                    class="address form-control"
+                  />
+                  <p class="addressErr"></p>
+                </div>
+              </div>
+
+              <div>
+                <div>
+                  <span>Phone:</span>
+                  <input
+                    type="text"
+                    placeholder="Student's phone number"
+                    class="pnumber form-control"
+                  />
+                  <p class="phoneErr"></p>
+                </div>
+
+                <div style="display: flex; gap: 10px; flex-direction: row">
+                  <span>Gender:</span>
+                  <span>Male</span>
+                  <input
+                    type="radio"
+                    name="gender"
+                    value="Male"
+                    class="gender"
+                    
+                  />
+                  <!-- name should be same to select one  -->
+                  <span>Female</span>
+                  <input
+                    type="radio"
+                    name="gender"
+                    value="Female"
+                    class="gender"
+                  />
+                  <p class="radio"></p>
+                </div>
+              </div>
+
+              <div>
+                <span>Addmission Date:</span>
+                <input class="addate form-control" type="date" placeholder="current date" />
+                <p class="addateErr"></p>
+              </div>
+
+              <div>
+                <span>Applying Class</span>
+                <select name="" class="applyingclass form-control">
+                  <option value="" disabled selected hidden>
+                    select classs
+                  </option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+                <p class="applyingclassErr"></p>
+              </div>
+
+              <div>
+                <span>Relationship:</span>
+                <select name="" class="relationship form-control">
+                  <option value="" disabled selected hidden>
+                    select relationship
+                  </option>
+                  <option value="Father">Father</option>
+                  <option value="Mother">Mother</option>
+                  <option value="Sister">Sister</option>
+                  <option value="Brother">Brother</option>
+                  <option value="Uncle">Uncle</option>
+                  <option value="Aunty">Aunty</option>
+                  <option value="Others">Others</option>
+                </select>
+                <p class="relationshipErr"></p>
+              </div>
+              <!-- parents info -->
+
+              <div>
+                <span>Parent Fname:</span>
+                <input
+                  type="text"
+                  placeholder="Parent's fname"
+                  class="pfname form-control"
+                />
+                <p class="pfnameErr"></p>
+              </div>
+
+              <div>
+                <span>Parent Lname:</span>
+                <input
+                  type="text"
+                  placeholder="Parent's lname"
+                  class="plname form-control"
+                />
+                <p class="plnameErr"></p>
+              </div>
+
+              <div>
+                <span>Parent Phone:</span>
+                <input
+                  type="number"
+                  placeholder="Parent's Number"
+                  class="pphone form-control"
+                />
+                <p class="pphoneErr"></p>
+              </div>
+
+              <div>
+                <span>Parent Email:</span>
+                <input
+                  type="email"
+                  placeholder="Parent's Number"
+                  class="pemail form-control"
+                />
+                <p class="pemailErr"></p>
+              </div>
+
+              <div>
+                <span>Address:</span>
+                <input
+                  type="text"
+                  placeholder="Parent Address"
+                  class="paddress form-control"
+                />
+                <p class="paddressErr"></p>
+              </div>
+
+              <div>
+                <span>Student date of brith:</span>
+                <input type="date" class="dob form-control" placeholder="Current date" />
+                <p class="dobErr"></p>
+              </div>
+
+              <div>
+                <!-- <span>Student's pic:</span>
+                <input type="file" class="document" placeholder="choose file" /> -->
+                <!-- <p class="docErr"></p> -->
+              </div>
+
+              <button class="btn btn-primary" type="submit" onclick="submited()">Submit</button>
+            </form>
+          </div>
+        </div>
+
+        <!-- student profile layout -->
+          <div class="studentprofile">
+            <div style="display: flex; justify-content:right">
+              <i id="std_profile" onclick="closeprofile()" class="fa-solid fa-square-xmark"></i>
+            </div>
+
+            <div class="studentinformation">
+              <div>
+                <div style="flex-direction: column;" class="table-responsive">
+                  <table class="table table-striped table-bordered table-hover">
+                    <tr>
+                      <td>Name:</td>
+                      <td><span class="st_name"></span></td>
+                      </tr>
+                      <tr>
+                      <td>Email:</td>
+                      <td><span class="st_email"></span><td>
+                      </tr>
+                      <tr>
+                        <td>Phone:</td>
+                        <td><span class="st_phone"></span></td>
+                      </tr>
+                      <tr>
+                        <td>Address:</td>
+                        <td><span class="st_address"></span></td>
+                      </tr>
+                      <tr>
+                        <td>Enrolled Date:</td>
+                        <td><span class="st_edate"></span></td>
+                      </tr>
+
+                      <tr>
+                        <td>Student gender:</td>
+                        <td><span class="st_gender"></span></td>
+                      </tr>
+
+                      <tr>
+                        <td>Student DOB:</td>
+                        <td> <span class="st_dob"></span></td>
+                      </tr>
+                      <tr>
+                        <td>Applied Class:</td>
+                        <td><span class="st_adate"></span></td>
+                      </tr>
+                      <tr>
+                        <td>Parent Name:</td>
+                        <td><span class="p_name"></span></td>
+                      </tr>
+                      <tr>
+                        <td>Relationship status with Parent:</td>
+                        <td><span class="p_relation"></span></td>
+                      </tr>
+                      <tr>
+                        <td>Parent Phone:</td>
+                        <td><span class="p_phone"></span></td>
+                      </tr>
+                      <tr>
+                        <td>Parent Email:</td>
+                        <td><span class="p_email"></span></td>
+                      </tr>
+                      <tr>
+                        <td>Parent Address:</td>
+                        <td><span class="p_address"></span></td>
+                      </tr>
+                  </table>
+                  <button onclick="viewresult()" class="btn btn-primary">view result</button>
+                  </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- student add result layout -->
+          <div class="addstudentresult">
+              <div style="display: flex; justify-content:right">
+              <i id="std_result" onclick="closeresultpannel()" class="fa-solid fa-square-xmark"></i>
+            </div>
+           <form action="" class="resultform">
+             <table  class="table table-bordered table-striped table-hover">
+              <thead>
+                <tr>
+                  <th>Subject Name</th>
+                  <th>Marks obtained by student</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Nepali</td>
+                  <td><input class="nepali" type="text"></td>
+                </tr>
+                <tr>
+                  <td>English</td>
+                  <td><input class="english" type="text"></td>
+                </tr>
+                <tr>
+                  <td>Math</td>
+                  <td><input class="math" type="text"></td>
+                </tr>
+                   <tr>
+                  <td>Science</td>
+                  <td><input class="science" type="text"></td>
+                </tr>
+                   <tr>
+                  <td>Social</td>
+                  <td><input class="social" type="text"></td>
+                </tr>
+                   <tr>
+                  <td>Health</td>
+                  <td><input class="health" type="text"></td>
+                </tr>
+                   <tr>
+                  <td>OPT Math</td>
+                  <td><input class="optmath" type="text"></td>
+                </tr>
+              </tbody>
+            </table>
+            <button id="btnresult" class="btn btn-primary">Submit</button>
+           </form>
+          </div>
+
+          <!-- student's view result layout -->
+           <div class="viewresult">
+            
+           </div>
+
+          <!-- teacher's profile layout -->
+           <div class="teacherprofile">
+              <div style="display: flex; justify-content:right">
+              <i id="teacher_profile" onclick="closeteacherprofile()" class="fa-solid fa-square-xmark"></i>
+            </div>
+            <table class="table table-hover">
+  <tbody>
+    <tr>
+      <th scope="row">Department:</th>
+      <td class="teacherdept"></td>
+    </tr>
+    <tr>
+      <th scope="row">Email:</th>
+      <td class="teacheremail"></td>
+    </tr>
+        <tr>
+      <th scope="row">Joining date:</th>
+      <td class="joining_date"></td>
+    </tr>
+    <tr>
+      <th scope="row">Phone Number:</th>
+      <td class="t_phonenumber"></td>
+    </tr>
+        <tr>
+      <th scope="row">Qualification:</th>
+      <td class="qualification"></td>
+    </tr>
+    <tr>
+      <th scope="row">Salary:</th>
+      <td class="salary"></td>
+    </tr>
+        <tr>
+      <th scope="row">Subject:</th>
+      <td class="subject"></td>
+    </tr>
+    <tr>
+      <th scope="row">Teacher's DOB:</th>
+      <td class="t_dob"></td>
+    </tr>
+        <tr>
+      <th scope="row">Teacher's name:</th>
+      <td class="t_name"></td>
+    </tr>
+    <tr>
+      <th scope="row">Experiance Year:</th>
+      <td class="expyear"></td>
+    </tr>
+  </tbody>
+</table>
+           </div>
+
+          <!-- student update -->
+  <div class="container mt-5" id="updatestudent">
+     <div style="display: flex; justify-content:right; display: inline;">
+              <i id="std_update" onclick="closeprofileofupdate()" class="fa-solid fa-square-xmark"></i>
+            </div>
+ <form>
+  <div>
+    <span>First Name:</span>
+    <input 
+      type="text"
+      placeholder="Student first name"
+      class="input-firstname"
+    />
+    <p class="error-firstname"></p>
+  </div>
+
+  <div>
+    <span>Last Name:</span>
+    <input
+      type="text"
+      placeholder="Student last name"
+      class="input-lastname"
+    />
+    <p class="error-lastname"></p>
+  </div>
+
+  <div>
+    <span>Email:</span>
+    <input type="email" placeholder="Email" class="input-email" />
+    <p class="error-email"></p>
+  </div>
+
+  <div>
+    <span>Student's Phone:</span>
+    <input
+      type="number"
+      placeholder="Student's phone"
+      class="input-student-phone"
+    />
+    <p class="error-student-phone"></p>
+  </div>
+  
+  <div>
+    <span>Address:</span>
+    <input
+      type="text"
+      placeholder="Student's address"
+      class="input-address"
+    />
+    <p class="error-address"></p>
+  </div>
+
+  <div>
+    <span>Parent First Name:</span>
+    <input
+      type="text"
+      placeholder="Parent's first name"
+      class="input-parent-firstname"
+    />
+    <p class="error-parent-firstname"></p>
+  </div>
+
+  <div>
+    <span>Parent Last Name:</span>
+    <input
+      type="text"
+      placeholder="Parent's last name"
+      class="input-parent-lastname"
+    />
+    <p class="error-parent-lastname"></p>
+  </div>
+
+  <div>
+    <span>Parent Phone:</span>
+    <input
+      type="number"
+      placeholder="Parent's phone"
+      class="input-parent-phone"
+    />
+    <p class="error-parent-phone"></p>
+  </div>
+
+  <div>
+    <input onclick="updatesubmit(event)" class="btn btn-primary" type="submit">
+  </div>
+</form>
+   </div>
+      </div>
+    </div>
+
+    <script src="./Jsfiles/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
