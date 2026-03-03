@@ -220,6 +220,30 @@ app.get("/studentinformation/result", async (req, res) => {
   }
 });
 
+app.get("/studentinformation/student_with_result", async (req, res) => {
+  try {
+    const student_with_result = await studentinfos.aggregate([
+      {
+        $lookup: {
+          from: "results",
+          localField: "_id",
+          foreignField: "studentid",
+          as: "results",
+        },
+      },
+      {
+        $unwind: {
+          path: "$results",
+          preserveNullAndEmptyArrays: true,
+        },
+      },
+    ]);
+    res.json(student_with_result);
+  } catch {
+    res.status(404).json({ message: "can not return the result with student" });
+  }
+});
+
 const PORT = 3000; // or any port you like
 
 app.listen(PORT, () => {

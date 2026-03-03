@@ -94,25 +94,6 @@ function dashbortevents(event, path) {
   }
 }
 
-// function dashbordevent(event, path) {
-//   event.preventDefault();
-
-//   history.pushState({}, "", path);
-//   dashbord_router();
-// }
-
-// function dashbord_router() {
-//   let path = window.location.pathname;
-
-//   document.querySelector(".centeral_div").forEach((d) => {
-//     d.style.display = "none";
-//   });
-
-//   if (path === "/student") {
-//     document.querySelector(".student-dashbord").style.display = "block";
-//   }
-// }
-
 // NOTICE
 
 let toggle = true;
@@ -557,7 +538,7 @@ async function viewresult() {
       <!-- Result Summary -->
       <div class="row mt-3">
         <div class="col-md-6">
-          <strong>Percentage:</strong> ${(total / 700) * 100 + "%"}
+          <strong>Percentage:</strong> ${((total / 700) * 100).toFixed(2) + "%"}
         </div>
         <div class="col-md-6">
           <strong>Result:</strong>${dis}
@@ -606,6 +587,8 @@ document
       alert("the result already exist in database");
     } else {
       alert("marks saved successfully");
+      document.querySelector(".stdmarks").innerHTML = "";
+      getstudentresult();
     }
     document.querySelector(".resultform").reset();
   });
@@ -903,34 +886,33 @@ function closeteacherprofile() {
 }
 
 async function getstudentresult() {
-  const res = await fetch(
-    "http://localhost:3000/studentinformation/studentinfo",
+  const response = await fetch(
+    "http://localhost:3000/studentinformation/student_with_result",
   );
-  const infos = await res.json();
+  const resinjson = await response.json();
+  // console.log(resinjson);
+  const studentwithresult = resinjson.filter(
+    (stdwithrslt) => stdwithrslt.results,
+  );
+  console.log(studentwithresult);
 
-  const marks = await fetch("http://localhost:3000/studentinformation/result");
-  const marksinjson = await marks.json();
-  // console.log(Array.isArray(marksinjson)); to check weather it is array or not
-  const marksAndstudentinfosCombined = [...infos, ...marksinjson];
-  console.log(marksAndstudentinfosCombined);
-
-  // console.log(infos);
-  //   infos.forEach(function (info) {
-  //     console.log(info);
-  //     document.querySelector(".stdmarks").innerHTML += `
-  //     <tr>
-  //     <td><td>
-  //     <td><td>
-  //     <td><td>
-  //     <td><td>
-  //     <td><td>
-  //     <td><td>
-  //     <td><td>
-  //     <td><td>
-  //     <td><td>
-  //     </tr>
-  //     `;
-  //   });
+  studentwithresult.forEach(function (info, index) {
+    document.querySelector(".stdmarks").innerHTML += `
+      <tr>
+      <td>${index + 1}</td>
+      <td>${info.st_fname} ${info.st_lname}</td>
+      <td>${info.class_addmission}</td>
+      <td>${info.results?.nepali || 0}</td>
+      <td>${info.results?.english || 0}</td>
+      <td>${info.results?.math || 0}</td>
+      <td>${info.results?.science || 0}</td>
+      <td>${info.results?.health || 0}</td>
+      <td>${info.results?.social || 0}</td>
+      <td>${info.results?.optmath || 0}</td>
+      <td>${parseInt(info.results.nepali) + parseInt(info.results.english) + parseInt(info.results.math) + parseInt(info.results.science) + parseInt(info.results.health) + parseInt(info.results.social) + parseInt(info.results.optmath) || 0}</td>
+      <td>${((parseInt(info.results.nepali) + parseInt(info.results.english) + parseInt(info.results.math) + parseInt(info.results.science) + parseInt(info.results.health) + parseInt(info.results.social) + parseInt(info.results.optmath)) / 7).toFixed(2) || 0}</td>
+      </tr>
+      `;
+  });
 }
-
 getstudentresult();
