@@ -1,12 +1,13 @@
 const express = require("express"); //import the express library
 const app = express(); // create a server using express
-
+const bcrypt = require("bcrypt");
 const mongoose = require("mongoose");
 
 require("./connectdb");
 const studentinfos = require("./models/studentshema"); // student module
 const teacherinfos = require("./models/teachershema"); // teacher module
 const result = require("./models/resultschema"); // result module
+const users = require("./models/passwordschema"); // password module
 
 app.use(express.json());
 const cors = require("cors");
@@ -244,6 +245,25 @@ app.get("/studentinformation/student_with_result", async (req, res) => {
   }
 });
 
+app.post("/studentinformation/register", async (req, res) => {
+  try {
+    console.log(req.body);
+    const { username, useremail, userpassword } = req.body;
+    const hashedpassword = await bcrypt.hash(userpassword, 10); //A salt is random extra data added to a password before hashing. the number 10 is number of random extra data that is added before the userpassword. the more the number the more secure it will be
+
+    const newuser = new users({
+      username,
+      useremail,
+      userpassword: hashedpassword,
+    });
+    await newuser.save();
+    res.json({ message: "user registered successfully" });
+  } catch (err) {
+    res
+      .status(404)
+      .json({ message: "error in saving user data", err: err.message });
+  }
+});
 const PORT = 3000; // or any port you like
 
 app.listen(PORT, () => {
